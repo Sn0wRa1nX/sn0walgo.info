@@ -4,10 +4,11 @@ import { useRef } from "react"
 import Image from "next/image"
 
 export default function HeroSection() {
-  const bottomRef = useRef<HTMLDivElement>(null)
-
-  const scrollToBottom = () => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+  const scrollToFeatures = () => {
+    const featuresSection = document.getElementById("features")
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   return (
@@ -28,7 +29,7 @@ export default function HeroSection() {
         </p>
         
         <button
-          onClick={scrollToBottom}
+          onClick={scrollToFeatures}
           className="bg-violet text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-105 shadow-lg"
         >
           Show More
