@@ -18,6 +18,8 @@ const serverResponses = [
   "Signature matched",
   "Access granted",
   "Server authenticated",
+  "RDP connection valid",
+  "Tunnel auth granted: 0x0",
 ]
 
 const commands = [
@@ -53,6 +55,9 @@ const commands = [
   () => `[SUCCESS] Jailbreak complete - System ready`,
   () => `[INFO] Device security level: ${generateHex(4)}`,
   () => `[INFO] Kernel patch state: Active`,
+  () => `[INFO] Device regging: Please wait for reboot`,
+  () => `[SUCCESS] Device status: Rebooting and applying patch!`,
+  () => `[INFO] Jailbreak log generated: ${generateHex(40)}_log.txt`,
 ]
 
 export default function SpeedVisualization() {
@@ -68,7 +73,7 @@ export default function SpeedVisualization() {
         newLines.push(command(progress) || command())
         return newLines
       })
-    }, 180) // Faster updates
+    }, 200) // Faster updates
 
     return () => clearInterval(timer)
   }, [])
