@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change if your default branch is differen
+      - main  # Change if your default branch is different
 
 permissions:
   contents: write
@@ -25,10 +25,8 @@ jobs:
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
 
-      - name: Build and Export Next.js
-        run: |
-          npm run build
-          npm run export
+      - name: Build Next.js
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
