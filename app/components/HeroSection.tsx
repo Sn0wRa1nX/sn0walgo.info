@@ -17,8 +17,8 @@ export default function HeroSection() {
         <Image 
           src="/logo.png" 
           alt="Sn0wAlgo Logo" 
-          width={250} 
-          height={100} 
+          width={500} 
+          height={250} 
           priority 
           className="mx-auto animate-fade-in-down"
         />
