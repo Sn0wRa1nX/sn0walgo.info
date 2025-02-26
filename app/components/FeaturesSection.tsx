@@ -48,7 +48,7 @@ export default function FeaturesSection() {
               key={feature.name}
               className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
             >
-              <div className="text-4xl mb-4 text-violet">{feature.icon}</div>
+              <div className="text-4xl mb-4 text-black">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-violet">{feature.name}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </div>
