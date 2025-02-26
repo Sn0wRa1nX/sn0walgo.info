@@ -34,6 +34,11 @@ export default function HeroSection() {
         >
           Show More
         </button>
+        <button
+          className="bg-black text-violet px-8 py-4 rounded-full font-bold text-lg hover:bg-opacity-90 transition duration-300 transform hover:scale-105 shadow-lg"
+        >
+          Coming soon...
+        </button>
       </div>
     </section>
   )
